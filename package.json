@@ -1,0 +1,61 @@
+{
+  "name": "ts-template",
+  "description": "typescript project template.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .ts --fix src/",
+    "test": "jest",
+    "prepublishOnly": "rm -fr dsit && yarn build",
+    "build": "tsc --build tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yidafu/ts-template.git"
+  },
+  "author": "yidafu (dov yih)",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/yidafu/ts-template/issues"
+  },
+  "homepage": "https://github.com/yidafu/ts-template#readme",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/jest": "^25.1.4",
+    "@typescript-eslint/eslint-plugin": "2.7.0",
+    "@typescript-eslint/parser": "2.7.0",
+    "babel-eslint": "10.0.3",
+    "commitlint": "^8.3.5",
+    "eslint": "6.6.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-lean-imports": "0.3.3",
+    "eslint-plugin-react": "7.14.3",
+    "husky": "^4.2.3",
+    "jest": "^25.1.0",
+    "stylelint": "7.12.0",
+    "stylelint-config-standard": "16.0.0",
+    "stylelint-processor-html": "1.0.0",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "3.7.2"
+  }
+}
