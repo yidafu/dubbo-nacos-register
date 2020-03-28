@@ -2,7 +2,7 @@
   "name": "@dovyih/dubbo-nacos-register",
   "description": "apache/dubbo-js nacos registr impl.",
   "version": "0.0.1",
-  "main": "nacos.js",
+  "main": "dist/nacos.js",
   "scripts": {
     "lint": "eslint --ext .ts --fix src/",
     "test": "jest",
