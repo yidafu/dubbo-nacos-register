@@ -19,7 +19,7 @@
 
 /* eslint-disable no-underscore-dangle */
 import debug from 'debug';
-import { Registry, DubboUrl } from '@dovyih/dubbo-js/';
+import { Registry, DubboUrl } from '@dovyih/dubbo-js';
 
 // eslint-disable-next-line
 import { IDubboRegistryProps } from '@dovyih/dubbo-js/es7/typings/types';
